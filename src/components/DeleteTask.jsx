@@ -15,7 +15,7 @@ export const DeleteTask = () => {
   const OverlayOne = () => (
     <ModalOverlay
       bg="blackAlpha.300"
-      backdropFilter="blur(10px) hue-rotate(90deg)"
+      backdropFilter="blur(10px)"
     />
   );
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -23,12 +23,15 @@ export const DeleteTask = () => {
   return (
     <>
       <Button
+      variant={"ghost"}
+      color={"red"}
+      rounded={0}
         onClick={() => {
           setOverlay(<OverlayOne />);
           onOpen();
         }}
       >
-        Use Overlay one
+        Delete
       </Button>
       {/* modal */}
 

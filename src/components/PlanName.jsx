@@ -9,6 +9,7 @@ import {
   useDisclosure,
   Button,
   Text,
+  background,
 } from "@chakra-ui/react";
 import { InputBox } from "./subComponent/InputBox";
 import { BsFillPlusSquareFill } from "react-icons/bs";
@@ -18,7 +19,7 @@ export const PlanName = () => {
   const OverlayOne = () => (
     <ModalOverlay
       bg="blackAlpha.300"
-      backdropFilter="blur(10px) hue-rotate(90deg)"
+      backdropFilter="blur(10px) "
     />
   );
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -30,8 +31,10 @@ export const PlanName = () => {
           setOverlay(<OverlayOne />);
           onOpen();
         }}
-        colorScheme={"blue"}
-        leftIcon={<BsFillPlusSquareFill background={"#3B82F6"}></BsFillPlusSquareFill>}
+        color={"white"}
+        backgroundColor={"#2563EB"}
+        leftIcon={<BsFillPlusSquareFill color={"#3B82F6"}></BsFillPlusSquareFill>}
+        _hover={{color:"blue", background:"white"}}
       >
         New Plan
       </Button>

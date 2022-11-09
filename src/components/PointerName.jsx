@@ -11,12 +11,13 @@ import {
     Text
   } from '@chakra-ui/react'
 import { InputBox } from "./subComponent/InputBox";
+import { AiOutlinePlus } from "react-icons/ai";
 
 export const PointerName = () => {
   const OverlayOne = () => (
     <ModalOverlay
       bg="blackAlpha.300"
-      backdropFilter="blur(10px) hue-rotate(90deg)"
+      backdropFilter="blur(10px)"
     />
   );
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -24,12 +25,16 @@ export const PointerName = () => {
   return (
     <>
       <Button
+      backgroundColor={"#F0F9FF"}
+      color={"#1D4ED8"}
+      
         onClick={() => {
           setOverlay(<OverlayOne />);
           onOpen();
         }}
+        leftIcon={<AiOutlinePlus></AiOutlinePlus>}
       >
-        Use Overlay one
+        Add Pointer
       </Button>
       {/* modal */}
 

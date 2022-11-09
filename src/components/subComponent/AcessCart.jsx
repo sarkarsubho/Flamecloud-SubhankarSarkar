@@ -65,7 +65,7 @@ export const AcessCart = ({
         </Box>
       </Flex>
       {
-        state &&<Flex className="dropdownuser" h={"148px"}  direction={"column"} gap={"5px"} padding={"10px 0"} border={"2px solid #CBD5E1"} mt={"10px"} borderRadius={"4px"}>
+        state &&<Flex  h={"148px"}  direction={"column"} gap={"5px"} padding={"10px 0"} border={"2px solid #CBD5E1"} mt={"10px"} borderRadius={"4px"} className="dropdownuser" >
           {
             users.map((e) => {
               return (

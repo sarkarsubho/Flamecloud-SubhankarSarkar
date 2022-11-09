@@ -20,7 +20,7 @@ export const SOPAccess = () => {
   const OverlayOne = () => (
     <ModalOverlay
       bg="blackAlpha.300"
-      backdropFilter="blur(10px) hue-rotate(90deg)"
+      backdropFilter="blur(10px)"
     />
   );
   const { isOpen, onOpen, onClose } = useDisclosure();
